@@ -1,6 +1,6 @@
 ## About App
 
-SSO is a web application to handle Authentication to all applications that registered in this application 
+SSO is a web application for handle Authentication to all applications that registered in this application 
 i make this app for my personal project to complete my final project at collage
 
 ## License
