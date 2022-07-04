@@ -8,9 +8,6 @@
                 <strong>SSO</strong> POLITEKNIK ACEH
             </div>
             <div class="card-body py-4">
-                @if ($errors->any())
-                    {!! implode('', $errors->all('<div>:message</div>')) !!}
-                @endif
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="mb-2">
@@ -23,6 +20,12 @@
                                 placeholder="Masukan nomor induk atau email anda">
 
                             @error('nomor_induk')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                            @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
