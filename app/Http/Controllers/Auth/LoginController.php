@@ -51,7 +51,7 @@ class LoginController extends Controller
             $field = 'nomor_induk';
         }
 
-        dd($login, filter_var($login, FILTER_VALIDATE_EMAIL), $field, request());
+        // dd($login, filter_var($login, FILTER_VALIDATE_EMAIL), $field, request());
 
         return $field;
     }
