@@ -11,10 +11,10 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="mb-2">
-                        <label for="nomor_induk" class="text-md-end">{{ __('NIP / NIM') }}</label>
+                        <label for="nomor_induk" class="text-md-end">{{ __('NIP / NIM / Email') }}</label>
 
                         <div>
-                            <input id="nomor_induk" type="nomor_induk"
+                            <input id="nomor_induk" type="text"
                                 class="form-control @error('nomor_induk') is-invalid @enderror" name="nomor_induk"
                                 value="{{ old('nomor_induk') }}" required autocomplete="nomor_induk">
 
