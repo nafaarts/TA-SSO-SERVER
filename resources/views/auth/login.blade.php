@@ -18,17 +18,15 @@
                                 class="form-control @error('nomor_induk') is-invalid @enderror" name="nomor_induk"
                                 value="{{ old('nomor_induk') }}" required autocomplete="nomor_induk" autofocus
                                 placeholder="Masukan nomor induk atau email anda">
-                            @error('nomor_induk')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
 
-                            @error('email')
+                            {{-- @error('nomor_induk')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                            @enderror --}}
+                            @if ($errors->any())
+                                {!! implode('', $errors->all('<div class="text-danger">:message</div>')) !!}
+                            @endif
                         </div>
                     </div>
 
