@@ -16,7 +16,8 @@
                         <div>
                             <input id="nomor_induk" type="text"
                                 class="form-control @error('nomor_induk') is-invalid @enderror" name="nomor_induk"
-                                value="{{ old('nomor_induk') }}" required autocomplete="nomor_induk">
+                                value="{{ old('nomor_induk') }}" required autocomplete="nomor_induk" autofocus
+                                placeholder="Masukan nomor induk atau email anda">
 
                             @error('nomor_induk')
                                 <span class="invalid-feedback" role="alert">
@@ -32,7 +33,7 @@
                         <div>
                             <input id="password" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="current-password">
+                                autocomplete="current-password" placeholder="Masukan password anda">
 
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
